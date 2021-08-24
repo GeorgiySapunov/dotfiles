@@ -1,0 +1,157 @@
+# Basic binds
+alt + Return
+				$TERMINAL
+alt + shift + q
+				kill -9 `xdotool getwindowfocus getwindowpid`
+alt + d
+				dmenu_run
+alt + shift + d
+				fcitx-remote -c && passmenu
+alt + r
+				$TERMINAL -e lf
+alt + shift + r
+				$TERMINAL -e htop
+alt + e
+				$TERMINAL -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook
+alt + shift + e
+				$TERMINAL -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook
+alt + m
+				$TERMINAL -e ncmpcpp
+alt + n
+				$TERMINAL -e nvim -c VimwikiIndex
+alt + shift + n
+				$TERMINAL -e newsboat; pkill -RTMIN+6 dwmblocks
+alt + c
+				$TERMINAL -e calcurse -D ~/.config/calcurse
+alt + v
+				$TERMINAL -e nvim -c VimwikiIndex
+alt + shift + a
+				$TERMINAL -e alsamixer || pulsemixer; pkill -RTMIN+10 $STATUSBAR
+alt + shift + c
+				mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
+alt + w
+				$BROWSER
+alt + shift + w
+				$TERMINAL -e sudo nmtui
+
+# Et cetera...
+alt + grave
+				dmenuunicode
+alt + Scroll_Lock
+				killall screenkey || screenkey
+alt + Insert
+				showclip
+alt + BackSpace
+				fcitx-remote -c && sysact
+XF86Launch1
+				xset dpms force off
+XF86TouchpadToggle
+				(synclient | grep "TouchpadOff.*1" && synclient TouchpadOff=0) || synclient TouchpadOff=1
+XF86Touchpad{Off,On}
+				synclient TouchpadOff={1,0}
+XF86MonBrightnessDown
+				xbacklight -dec 15
+XF86MonBrightnessUp
+				xbacklight -inc 15
+
+# Recording
+# Take screenshot
+Print
+				maim pic-full-$(date '+%y%m%d-%H%M-%S').png
+# Pick screenshot type
+shift + Print
+				maimpick
+# Print: Record audio or video; Del: kill recording
+alt + Print
+				dmenurecord
+alt + Delete
+				dmenurecord kill
+
+# Pause audio
+alt + p
+				mpc toggle
+alt + shift + p
+				mpc pause; pauseallmpv
+# Changes to next/previous tracks
+alt + {comma,period}
+				mpc {prev,next}
+# Restart track
+alt + shift + less
+				mpc seek 0%
+alt + shift + greater
+				mpc repeat
+# Seek foward in song
+alt + {_,shift +} bracketright
+				mpc seek +{10,60}
+# Seek backward in song
+alt + {_,shift +} bracketleft
+				mpc seek -{10,60}
+# Increase volume
+alt + {equal,plus}
+				pamixer --allow-boost -i {5,15}; kill -44 $(pidof dwmblocks)
+# Decrease volume
+alt {_,shift +} + minus
+				pamixer --allow-boost -d {5,15}; kill -44 $(pidof dwmblocks)
+alt + shift + m
+				pamixer -t; kill -44 $(pidof dwmblocks)
+
+# Audiokeys
+XF86AudioMute
+				pamixer -t; kill -44 $(pidof dwmblocks)
+XF86Audio{Raise,Lower}Volume
+				pamixer --allow-boost -{i,d} 3; kill -44 $(pidof dwmblocks)
+XF86Audio{Next,Prev}
+				mpc {next,prev}
+XF86Audio{Pause,Play,Stop}
+				mpc {pause,play,stop}
+XF86Audio{Rewind,Forward}
+				mpc seek {-,+}10
+XF86AudioRecord
+				dmenurecord
+XF86AudioMedia
+				$TERMINAL -e ncmpcpp
+
+XF86PowerOff
+				fcitx-remote -c && sysact
+XF86Calculator
+				$TERMINAL -e bc -l
+XF86Sleep
+				sudo -A zzz
+XF86WWW
+				$BROWSER
+XF86DOS
+				$TERMINAL
+XF86ScreenSaver
+				fcitx-remote -c && betterlockscreen -l & xset dpms force off; mpc pause; pauseallmpv
+XF86TaskPane
+				$TERMINAL -e htop
+XF86Mail
+				$TERMINAL -e neomutt ; pkill -RTMIN+12 dwmblocks
+XF86MyComputer
+				$TERMINAL -e lf /
+
+# Change display
+alt + F1
+				setxkbmap -variant qwerty
+alt + F2
+				setxkbmap -variant dvorak,
+alt + F3
+				displayselect
+alt + F4
+				$TERMINAL -e pulsemixer; kill -44 $(pidof dwmblocks)
+# Start torrent daemon/open interface
+alt + F6
+				torwrap
+# toggle torrent daemon
+alt + F7
+				td-toggle
+# sync email
+alt + F8
+				mw -Y
+# Mount a USB drive or Android device
+alt + {F9,F10}
+				{dmenumount,dmenuumount}
+alt + F11
+				mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)
+alt + F12
+				remaps & notify-send \\\"⌨️ Keyboard remapping...\\\" \\\"Re-running keyboard defaults for any newly plugged-in keyboards.\\\"

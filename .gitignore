@@ -1,0 +1,5 @@
+*.log
+/etc/X11/xorg.conf.d/20-intel.conf*/
+/etc/X11/xorg.conf.d/20-nouveau.conf*/
+/.local/share/wallpaper.jpg
+/.local/share/bg
