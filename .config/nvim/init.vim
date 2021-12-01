@@ -23,6 +23,8 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
 
+Plug 'ryanoasis/vim-devicons'
+
 Plug 'rlue/vim-barbaric'
 
 Plug 'lervag/vimtex'
