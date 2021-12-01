@@ -1,7 +1,5 @@
 call plug#begin(stdpath('data'))
 
-Plug 'ambv/black'
-
 " telescope requirements
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
