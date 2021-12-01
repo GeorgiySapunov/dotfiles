@@ -2,7 +2,7 @@ call plug#begin(stdpath('data'))
 
 Plug 'ambv/black'
 
-" telescope requirements...
+" telescope requirements
 Plug 'nvim-lua/popup.nvim'
 Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
@@ -13,8 +13,8 @@ Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
 Plug 'nvim-treesitter/playground'
 
 Plug 'tpope/vim-surround'
-Plug 'Raimondi/delimitMate'
-Plug 'preservim/nerdcommenter'
+Plug 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis, brackets, etc.
+Plug 'preservim/nerdcommenter' "<leader>cc to comment line and <leader>cu to uncomment
 Plug 'mbbill/undotree'
 Plug 'dhruvasagar/vim-table-mode'
 Plug 'chrisbra/Colorizer'
@@ -23,22 +23,20 @@ Plug 'vim-airline/vim-airline'
 Plug 'vim-airline/vim-airline-themes'
 Plug 'rafi/awesome-vim-colorschemes'
 
-Plug 'ryanoasis/vim-devicons'
-Plug 'sheerun/vim-polyglot'
+Plug 'ryanoasis/vim-devicons' "pretty icons
+Plug 'sheerun/vim-polyglot' "syntax highlighter
 
 Plug 'rlue/vim-barbaric'
 
 Plug 'lervag/vimtex'
 Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+"Plug 'vim-pandoc/vim-pandoc'
+"Plug 'vim-pandoc/vim-pandoc-syntax'
 
 Plug 'vimwiki/vimwiki'
 
-Plug 'vim-pandoc/vim-pandoc'
-
 " git
 Plug 'tpope/vim-fugitive'
-
-"Plug 'sheerun/vim-polyglot'
 
 " lspconfig and completion
 Plug 'neovim/nvim-lspconfig'
