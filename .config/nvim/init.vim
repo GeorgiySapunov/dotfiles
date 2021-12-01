@@ -44,6 +44,9 @@ Plug 'hrsh7th/cmp-path'
 Plug 'hrsh7th/cmp-cmdline'
 Plug 'hrsh7th/nvim-cmp'
 
+" format on save
+Plug 'lukas-reineke/format.nvim'
+
 " R
 Plug 'jalvesaq/Nvim-R', {'branch': 'stable'}
 
@@ -65,6 +68,10 @@ source $HOME/.config/nvim/settings/lsp.vim
 source $HOME/.config/nvim/settings/vimtex.vim
 source $HOME/.config/nvim/settings/telescope.vim
 source $HOME/.config/nvim/settings/vimwiki.vim
+source $HOME/.config/nvim/lua/format-config/init.lua
 
 " The IME to invoke for managing input languages (macos, fcitx, ibus, xkb-switch)
 let g:barbaric_ime = 'fcitx'
+
+"transparent background
+"highlight Normal guibg=none
