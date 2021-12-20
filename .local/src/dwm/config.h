@@ -164,6 +164,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_Right, tagmon,         {.i = +1 } },
 	{ MODKEY|ShiftMask,           	XK_Return, togglescratch,  {.ui = 0 } },
 	{ MODKEY,           	XK_apostrophe,	   togglescratch,  {.ui = 1 } },
+	{ MODKEY|ShiftMask,     XK_apostrophe,     togglesmartgaps,     {0} },
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
