@@ -1,4 +1,4 @@
-:setlocal spell spelllang=ru_yo,en_us
+:setlocal spell spelllang=ru_yo,en_us,fr,cjk
 
 set encoding=utf-8
 set splitbelow
@@ -62,3 +62,5 @@ set cmdheight=1
 set updatetime=50
 
 set colorcolumn=80
+
+set completeopt=menu,menuone,noselect
