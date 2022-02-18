@@ -3,6 +3,8 @@ alt + Return
 				$TERMINAL
 alt + shift + q
 				kill -9 `xdotool getwindowfocus getwindowpid`
+alt + z
+                betterlockscreen -l
 alt + d
 				dmenu_run
 alt + shift + d
