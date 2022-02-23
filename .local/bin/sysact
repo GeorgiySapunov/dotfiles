@@ -9,8 +9,8 @@ case "$(printf "⚿ lock\n🡄 leave dwm\n🗘 renew dwm\n⏼ hibernate\n⏾ sle
 	'⚿ lock') betterlockscreen -l ;;
 	'🡄 leave dwm') kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
 	'🗘 renew dwm') kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
-	'⏼ hibernate') betterlockscreen -l $ctl hibernate ;;
-	'⏾ sleep') betterlockscreen -l $ctl suspend ;;
+	'⏼ hibernate') $ctl hibernate ;;
+	'⏾ sleep') $ctl suspend ;;
 	'↺ reboot') $ctl reboot -i ;;
 	'⏻ shutdown') $ctl poweroff -i ;;
 	'▪ display off') xset dpms force off ;;
