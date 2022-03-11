@@ -1,10 +1,14 @@
 # Basic binds
 alt + Return
 				$TERMINAL
+alt + shift + Return
+
 alt + shift + q
 				kill -9 `xdotool getwindowfocus getwindowpid`
 alt + z
                 betterlockscreen -l
+alt + n
+                samedir
 alt + d
 				dmenu_run
 alt + shift + d
@@ -19,14 +23,16 @@ alt + shift + e
 				$TERMINAL -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook
 alt + m
 				$TERMINAL -e ncmpcpp
-alt + n
-				$TERMINAL -e nvim -c VimwikiIndex
+#alt + n
+				#qutebrowser
 alt + shift + n
-				$TERMINAL -e newsboat; pkill -RTMIN+6 dwmblocks
+
 alt + c
 				$TERMINAL -e calcurse -D ~/.config/calcurse
 alt + v
-				$TERMINAL -e nvim -c VimwikiIndex
+
+alt + shift + v
+
 alt + shift + a
 				$TERMINAL -e alsamixer || pulsemixer; pkill -RTMIN+10 $STATUSBAR
 alt + shift + c
@@ -35,6 +41,8 @@ alt + w
 				$BROWSER
 alt + shift + w
 				$TERMINAL -e sudo nmtui
+alt + ctrl + w
+				qutebrowser
 
 # Et cetera...
 alt + grave
@@ -154,6 +162,6 @@ alt + F8
 alt + {F9,F10}
 				{dmenumount,dmenuumount}
 alt + F11
-				mpv --untimed --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)
+				mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)
 alt + F12
 				remaps & notify-send \\\"⌨️ Keyboard remapping...\\\" \\\"Re-running keyboard defaults for any newly plugged-in keyboards.\\\"
