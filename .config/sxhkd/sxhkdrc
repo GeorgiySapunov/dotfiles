@@ -8,6 +8,10 @@ alt + shift + q
 alt + z
                 betterlockscreen -l
 alt + n
+				$TERMINAL -e nvim ~/git/notes/README.md
+alt + shift + n
+				$TERMINAL -e newsboat; pkill -RTMIN+6 dwmblocks
+alt + x
                 samedir
 alt + d
 				dmenu_run
