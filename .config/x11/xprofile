@@ -8,9 +8,9 @@ setbg &			# set the background with the `setbg` script
 xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment to use Xresources colors/settings on startup
 remaps &		# run the remaps script, switching caps/esc and more; check it for more info
 #picom &		# xcompmgr for transparency
-xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'loginctl suspend' '' & # xidlehook to suspend automatically after 30 minutes of idle
-#xidlehook --not-when-audio --not-when-fullscreen --timer 1800 '$ctl suspend' '' &
-autostart="mpd xcompmgr dunst unclutter pipewire sxhkd fcitx"
+xidlehook --not-when-audio --not-when-fullscreen --timer 1800 'loginctl suspend' '' & # xidlehook to suspend automatically after 30 minutes of idle (for runit)
+#xidlehook --not-when-audio --not-when-fullscreen --timer 1800 '$systemctl suspend' '' & # for systemd
+autostart="mpd dunst unclutter sxhkd fcitx pipewire"
 
 for program in $autostart; do
 	pidof -s "$program" || setsid -f "$program"
