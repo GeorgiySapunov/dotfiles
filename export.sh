@@ -9,7 +9,7 @@ rsync -uvrP --delete-after ~/git/dotfiles/.config/mpd/mpd.conf       ~/.config/m
 rsync -uvrP --delete-after ~/git/dotfiles/.config/mpv                ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/ncmpcpp            ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/nvim               ~/.config
-rsync -uvrP --delete-after ~/git/dotfiles/.config/pulse/daemon.conf  ~/.config/pulse/
+rsync -uvrP --delete-after ~/git/dotfiles/.config/pipewire           ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/shell              ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/sxhkd              ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/sxiv               ~/.config
@@ -33,8 +33,6 @@ rsync -uvrP --delete-after ~/git/dotfiles/.local/share/themes        ~/.local/sh
 cp ~/git/dotfiles/.config/shell/profile ~/.zprofile
 cp ~/git/dotfiles/.config/x11/xprofile  ~/.xprofile
 cp ~/git/dotfiles/.local/share/bg  ~/.local/share
-
-rsync -uvrP --delete-after ~/git/dotfiles/pinentry                   ~
 
 
 #rsync -uvrP --delete-after ~/git/dotfiles/.gnupg                     ~
