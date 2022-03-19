@@ -1,4 +1,8 @@
 [Default Applications]
+
+# xdg-open will use these settings to determine how to open filetypes.
+# These .desktop entries can also be seen and changed in ~/.local/share/applications/
+
 text/x-shellscript=text.desktop;
 x-scheme-handler/magnet=torrent.desktop;
 application/x-bittorrent=torrent.desktop;
@@ -13,7 +17,6 @@ application/rss+xml=rss.desktop
 video/x-matroska=video.desktop
 x-scheme-handler/lbry=lbry.desktop
 inode/directory=file.desktop
-x-scheme-handler/tg=userapp-Telegram Desktop-VSAK40.desktop
 
 [Added Associations]
 x-scheme-handler/tg=userapp-Telegram Desktop-VSAK40.desktop;

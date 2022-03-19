@@ -8,6 +8,7 @@ rsync -uvrP --delete-after ~/git/dotfiles/.config/lf                 ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/mpd/mpd.conf       ~/.config/mpd/
 rsync -uvrP --delete-after ~/git/dotfiles/.config/mpv                ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/ncmpcpp            ~/.config
+rsync -uvrP --delete-after ~/git/dotfiles/.config/newsboat           ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/nvim               ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/pipewire           ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/shell              ~/.config

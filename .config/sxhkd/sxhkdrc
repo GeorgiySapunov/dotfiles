@@ -18,7 +18,7 @@ alt + d
 alt + shift + d
 				fcitx-remote -c && passmenu
 alt + r
-				$TERMINAL -e lf
+				$TERMINAL -e lfub
 alt + shift + r
 				$TERMINAL -e htop
 alt + e
@@ -146,9 +146,9 @@ XF86MyComputer
 
 # Change display
 alt + F1
-				setxkbmap -variant qwerty
+				groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -
 alt + F2
-				setxkbmap -variant dvorak,
+				tutorialvids
 alt + F3
 				displayselect
 alt + F4
