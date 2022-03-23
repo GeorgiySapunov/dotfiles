@@ -32,7 +32,7 @@ alt + m
 alt + shift + n
 
 alt + c
-				$TERMINAL -e calcurse -D ~/.config/calcurse
+				$TERMINAL -e calcurse
 alt + v
 
 alt + shift + v
