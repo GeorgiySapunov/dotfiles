@@ -41,7 +41,7 @@ ln -s ~/.local/share/wallpaper.jpg ~/git/dotfiles/.local/share/bg
 
 #rsync -uvrP --delete-after /etc/ssh                     ~/git/dotfiles/etc
 #rsync -uvrP --delete-after /etc/tor                     ~/git/dotfiles/etc
-rsync -uvrP --delete-after /etc/X11                     ~/git/dotfiles/etc
+rsync -uvrP --delete-after /etc/X11/xorg.conf.d          ~/git/dotfiles/etc/X11/
 rsync -uvrP --delete-after /etc/pacman.conf             ~/git/dotfiles/etc/
 rsync -uvrP --delete-after /etc/paru.conf               ~/git/dotfiles/etc/
 
