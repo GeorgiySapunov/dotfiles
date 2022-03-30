@@ -26,7 +26,9 @@ Plug 'sheerun/vim-polyglot' "syntax highlighter
 Plug 'rlue/vim-barbaric'
 
 Plug 'lervag/vimtex'
-Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
+
+Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']} "run this do setup markdown-preview: :call mkdp#util#install()
+
 "Plug 'vim-pandoc/vim-pandoc'
 "Plug 'vim-pandoc/vim-pandoc-syntax'
 

@@ -41,7 +41,7 @@ cp ~/git/dotfiles/.local/share/bg  ~/.local/share
 
 #sudo rsync -uvrP --delete-after /git/dotfiles/etc/ssh                /etc
 #sudo rsync -uvrP --delete-after /git/dotfiles/etc/tor                /etc
-#sudo rsync -uvrP --delete-after /git/dotfiles/etc/X11                /etc
+#sudo rsync -uvrP --delete-after /git/dotfiles/etc/X11/xorg.conf.d                /etc/X11
 #sudo rsync -uvrP --delete-after /git/dotfiles/etc/pacman.conf        /etc/
 #sudo rsync -uvrP --delete-after /git/dotfiles/etc/paru.conf          /etc/
 
