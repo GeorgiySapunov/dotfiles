@@ -18,7 +18,7 @@ alias \
 	rm="rm -vI" \
 	bc="bc -ql" \
 	mkd="mkdir -pv" \
-	yt="yt-dlp -i --add-metadata --write-sub " \
+	yt="yt-dlp --embed-metadata -i --write-sub " \
 	ytp="yt -o \"%(playlist_index)s-%(title)s.%(ext)s\"" \
 	yta="yt-dlp -x -f bestaudio/best" \
 	ffmpeg="ffmpeg -hide_banner"
