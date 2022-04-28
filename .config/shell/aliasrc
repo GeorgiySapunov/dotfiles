@@ -22,7 +22,8 @@ alias \
 	ytp="yt -o \"%(playlist_index)s-%(title)s.%(ext)s\"" \
 	yta="yt-dlp -x -f bestaudio/best --audio-format mp3" \
 	ytpa="yta -o \"%(playlist_index)s-%(title)s.%(ext)s\"" \
-	ffmpeg="ffmpeg -hide_banner"
+	ffmpeg="ffmpeg -hide_banner" \
+    mpv="mpv --save-position-on-quit"
 
 # Colorize commands when possible.
 alias \
