@@ -20,7 +20,8 @@ alias \
 	mkd="mkdir -pv" \
 	yt="yt-dlp --embed-metadata -i --write-sub " \
 	ytp="yt -o \"%(playlist_index)s-%(title)s.%(ext)s\"" \
-	yta="yt-dlp -x -f bestaudio/best" \
+	yta="yt-dlp -x -f bestaudio/best --audio-format mp3" \
+	ytpa="yta -o \"%(playlist_index)s-%(title)s.%(ext)s\"" \
 	ffmpeg="ffmpeg -hide_banner"
 
 # Colorize commands when possible.
