@@ -77,3 +77,6 @@ nnoremap <leader>sv :source $MYVIMRC<cr>
 
 " enable or disable line wrapping in current buffer
 nnoremap <buffer> <localleader>w :set wrap!<cr>
+
+" null-ls.nvim
+nnoremap <leader>fm :lua vim.lsp.buf.formatting()<CR>

@@ -64,3 +64,15 @@ EOF
 let g:LanguageClient_serverCommands = {
     \ 'r': ['R', '--slave', '-e', 'languageserver::run()'],
     \ }
+
+
+" jose-elias-alvarez/null-ls.nvim
+lua << EOF
+require("null-ls").setup({
+    sources = {
+        require("null-ls").builtins.formatting.stylua,
+        require("null-ls").builtins.formatting.black,
+        require("null-ls").builtins.diagnostics.flake8,
+    },
+})
+EOF
