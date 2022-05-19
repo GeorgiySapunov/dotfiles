@@ -5,10 +5,6 @@ Plug 'nvim-lua/plenary.nvim'
 Plug 'nvim-telescope/telescope.nvim'
 Plug 'nvim-telescope/telescope-fzy-native.nvim'
 
-" Neovim Tree sitter
-Plug 'nvim-treesitter/nvim-treesitter', {'do': ':TSUpdate'}
-Plug 'nvim-treesitter/playground'
-
 Plug 'tpope/vim-surround'
 Plug 'Raimondi/delimitMate' "automatic closing of quotes, parenthesis, brackets, etc.
 Plug 'preservim/nerdcommenter' "<leader>cc to comment line and <leader>cu to uncomment
@@ -37,8 +33,11 @@ Plug 'vimwiki/vimwiki'
 " git
 Plug 'tpope/vim-fugitive'
 
-" lspconfig and completion
+" lspconfig
 Plug 'neovim/nvim-lspconfig'
+Plug 'jose-elias-alvarez/null-ls.nvim'
+
+" completion
 Plug 'hrsh7th/cmp-nvim-lsp'
 Plug 'hrsh7th/cmp-buffer'
 Plug 'hrsh7th/cmp-path'
@@ -71,4 +70,4 @@ source $HOME/.config/nvim/settings/vimwiki.vim
 let g:barbaric_ime = 'fcitx'
 
 "transparent background
-highlight Normal guibg=none
+"highlight Normal guibg=none
