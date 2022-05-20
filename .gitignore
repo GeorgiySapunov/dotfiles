@@ -3,4 +3,3 @@
 /etc/X11/xorg.conf.d/20-nouveau.conf*/
 /.local/share/wallpaper.jpg
 /.local/share/bg
-/.config/nvim/plugin
