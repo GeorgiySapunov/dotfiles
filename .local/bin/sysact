@@ -19,8 +19,8 @@ case "$(printf "🔒 lock\n🚪 leave $WM\n♻️ renew $WM\n🐻 hibernate\n�
 	"♻️ renew $WM") kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
 	#"🚪 leave $WM") kill -TERM "$(wmpid)" ;;
 	#"♻️ renew $WM") kill -HUP "$(wmpid)" ;;
-	'🐻 hibernate') $ctl hibernate ;;
-	'💤 sleep') $ctl suspend ;;
+	'🐻 hibernate') $ctl hibernate -i ;;
+	'💤 sleep') $ctl suspend -i ;;
 	'🔃 reboot') $ctl reboot -i ;;
 	'🖥️shutdown') $ctl poweroff -i ;;
 	'📺 display off') xset dpms force off ;;
