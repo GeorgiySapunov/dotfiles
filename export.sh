@@ -10,6 +10,7 @@ rsync -uvrP --delete-after ~/git/dotfiles/.config/mpv                ~/.config
 #rsync -uvrP --delete-after ~/git/dotfiles/.config/ncmpcpp            ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/newsboat           ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/nvim/init.lua      ~/.config/nvim
+rsync -uvrP --delete-after ~/git/dotfiles/.config/nvim/ftplugin      ~/.config/nvim
 rsync -uvrP --delete-after ~/git/dotfiles/.config/nvim/lua           ~/.config/nvim
 rsync -uvrP --delete-after ~/git/dotfiles/.config/pipewire           ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/shell              ~/.config
