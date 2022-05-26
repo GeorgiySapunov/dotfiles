@@ -34,7 +34,7 @@ rsync -uvrP --delete-after ~/.local/bin                 ~/git/dotfiles/.local
 rsync -uvrP --delete-after ~/.local/src                 ~/git/dotfiles/.local
 rsync -uvrP --delete-after ~/.local/share/applications  ~/git/dotfiles/.local/share
 rsync -uvrP --delete-after ~/.local/share/larbs         ~/git/dotfiles/.local/share
-rsync -uvrP --delete-after ~/.local/share/wallpaper.jpg ~/git/dotfiles/.local/share
+# rsync -uvrP --delete-after ~/.local/share/wallpaper.jpg ~/git/dotfiles/.local/share
 rsync -uvrP --delete-after ~/.local/share/themes        ~/git/dotfiles/.local/share
 
 ln -s ~/.config/shell/profile ~/git/dotfiles/.zprofile
