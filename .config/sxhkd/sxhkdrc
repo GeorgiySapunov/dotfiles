@@ -27,10 +27,6 @@ alt + shift + e
 				$TERMINAL -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook
 alt + m
 				$TERMINAL -e ncmpcpp
-#alt + n
-				#qutebrowser
-alt + shift + n
-
 alt + c
 				$TERMINAL -e calcurse
 alt + v
@@ -168,4 +164,4 @@ alt + {F9,F10}
 alt + F11
 				mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)
 alt + F12
-				remaps & notify-send \\\"⌨️ Keyboard remapping...\\\" \\\"Re-running keyboard defaults for any newly plugged-in keyboards.\\\"
+				remaps & notify-send \"⌨️ Keyboard remapping...\" \"Re-running keyboard defaults for any newly plugged-in keyboards.\"
