@@ -30,9 +30,9 @@ alt + m
 alt + c
 				$TERMINAL -e calcurse
 alt + v
-
+                telegram-desktop
 alt + shift + v
-
+                tor-browser
 alt + shift + a
 				$TERMINAL -e alsamixer || pulsemixer; pkill -RTMIN+10 $STATUSBAR
 alt + shift + c
