@@ -95,7 +95,6 @@ return packer.startup(function(use)
   use("mbbill/undotree")
   use("dhruvasagar/vim-table-mode")
   use("rlue/vim-barbaric")
-  use("lervag/vimtex")
   use({
   	"iamcco/markdown-preview.nvim",
   	run = function()

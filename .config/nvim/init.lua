@@ -20,6 +20,5 @@ require "user.alpha"
 require "user.whichkey"
 require "user.autocommands"
 
-require("user.vimtex")
 require("user.barbaric")
 require("user.vimwiki")
