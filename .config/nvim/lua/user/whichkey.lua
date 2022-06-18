@@ -172,7 +172,6 @@ local mappings = {
     k = { "<cmd>Telescope keymaps<cr>", "Keymaps" },
     C = { "<cmd>Telescope commands<cr>", "Commands" },
   },
-
   t = {
     name = "Terminal",
     n = { "<cmd>lua _NODE_TOGGLE()<cr>", "Node" },
@@ -182,6 +181,19 @@ local mappings = {
     f = { "<cmd>ToggleTerm direction=float<cr>", "Float" },
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
+  },
+  d = {
+    name = "DAP",
+    b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle breakpoint" },
+    c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },
+    i = { "<cmd>lua require'dap'.step_into()<cr>", "Step into" },
+    o = { "<cmd>lua require'dap'.step_over()<cr>", "Step over" },
+    O = { "<cmd>lua require'dap'.step_out()<cr>", "Step out" },
+    r = { "<cmd>lua require'dap'.repl.toggle()<cr>", "REPL toggle" },
+    l = { "<cmd>lua require'dap'.run_last()<cr>", "Run last" },
+    u = { "<cmd>lua require'dapui'.toggle()<cr>", "DAPui toggle" },
+    t = { "<cmd>lua require'dap'.terminate()<cr>", "Terminate" },
+    B = { "<cmd>lua require'dap'.set_breakpoint(vim.fn.input('Breakpoint condition: '))<cr>", "Breakpoint condition" },
   },
 }
 
