@@ -19,7 +19,8 @@ dap_install.config("python", {})
 -- add other configs here
 
 dapui.setup {
-  sidebar = {
+  layouts = {
+    {
     elements = {
       {
         id = "scopes",
@@ -29,9 +30,7 @@ dapui.setup {
     },
     size = 40,
     position = "right", -- Can be "left", "right", "top", "bottom"
-  },
-  tray = {
-    elements = {},
+    },
   },
 }
 
