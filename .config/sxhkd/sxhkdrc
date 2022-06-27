@@ -5,14 +5,14 @@ alt + shift + Return
 
 alt + shift + q
 				kill -9 `xdotool getwindowfocus getwindowpid`
-alt + z
+super + z
                 betterlockscreen -l
+super + x
+                samedir
 alt + n
 				$TERMINAL -e nvim ~/git/notes/README.md
 alt + shift + n
 				$TERMINAL -e newsboat; pkill -RTMIN+6 dwmblocks
-alt + x
-                samedir
 alt + d
 				dmenu_run
 alt + shift + d
