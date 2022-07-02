@@ -10,7 +10,7 @@ remaps &		# run the remaps script, switching caps/esc and more; check it for mor
 #xcompmgr &		# xcompmgr for transparency
 xidlehook --not-when-audio --not-when-fullscreen --timer 300 'loginctl suspend' '' & # xidlehook to suspend automatically after 5 minutes of idle (for runit)
 #xidlehook --not-when-audio --not-when-fullscreen --timer 300 '$systemctl suspend' '' & # for systemd
-autostart="pipewire mpd picom dunst unclutter sxhkd fcitx"
+autostart="mpd picom dunst unclutter sxhkd fcitx pipewire pipewire-pulse"
 
 for program in $autostart; do
     pidof -s "$program" || "$program" &
