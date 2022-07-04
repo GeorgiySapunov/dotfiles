@@ -8,7 +8,7 @@ export XAUTHORITY="$userhome/.Xauthority"
 export DISPLAY=":0.0"
 case "${1}" in
     pre)
-        su $username -c "fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l" &
+        su $username -c "fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l dim 50" &
         sleep 1s;
         ;;
 esac
