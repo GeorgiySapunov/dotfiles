@@ -14,7 +14,7 @@ esac
 # }
 
 case "$(printf " lock\n﫼 leave $WM\n renew $WM\n hibernate\nﰇ reboot\n shutdown\n鈴 sleep\n display off" | dmenu -i -p 'Action: ')" in
-	' lock') betterlockscreen -l ;;
+	' lock') fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l ;;
 	"﫼 leave $WM") kill -TERM "$(pgrep -u "$USER" "\bdwm$")" ;;
 	" renew $WM") kill -HUP "$(pgrep -u "$USER" "\bdwm$")" ;;
 	#"🚪 leave $WM") kill -TERM "$(wmpid)" ;;

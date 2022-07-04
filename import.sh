@@ -29,6 +29,7 @@ rsync -uvrP --delete-after ~/.config/fcitx/profile      ~/git/dotfiles/.config/f
 rsync -uvrP --delete-after ~/.config/mimeapps.list      ~/git/dotfiles/.config/
 rsync -uvrP --delete-after ~/.config/user-dirs.dirs     ~/git/dotfiles/.config/
 rsync -uvrP --delete-after ~/.config/picom.conf         ~/git/dotfiles/.config/
+# rsync -uvrP --delete-after ~/.config/pam-gnupg          ~/git/dotfiles/.config/
 
 rsync -uvrP --delete-after ~/.local/bin                 ~/git/dotfiles/.local
 rsync -uvrP --delete-after ~/.local/src                 ~/git/dotfiles/.local
@@ -42,18 +43,21 @@ ln -s ~/.config/x11/xprofile ~/git/dotfiles/.xprofile
 ln -s ~/.local/share/wallpaper.jpg ~/git/dotfiles/.local/share/bg
 
 
-#rsync -uvrP --delete-after ~/.gnupg                     ~/git/dotfiles
-#rsync -uvrP --delete-after ~/.ssh                       ~/git/dotfiles
+rsync -uvrP --delete-after ~/.gnupg/gpg-agent.conf         ~/git/dotfiles/.gnupg/
+#rsync -uvrP --delete-after ~/.gnupg                        ~/git/dotfiles
+#rsync -uvrP --delete-after ~/.ssh                          ~/git/dotfiles
 
-#rsync -uvrP --delete-after /etc/ssh                     ~/git/dotfiles/etc
-#rsync -uvrP --delete-after /etc/tor                     ~/git/dotfiles/etc
-rsync -uvrP --delete-after /etc/X11/xorg.conf.d          ~/git/dotfiles/etc/X11/
-rsync -uvrP --delete-after /etc/pacman.conf             ~/git/dotfiles/etc/
-rsync -uvrP --delete-after /etc/paru.conf               ~/git/dotfiles/etc/
+#rsync -uvrP --delete-after /etc/ssh                        ~/git/dotfiles/etc
+#rsync -uvrP --delete-after /etc/tor                        ~/git/dotfiles/etc
+rsync -uvrP --delete-after /etc/X11/xorg.conf.d            ~/git/dotfiles/etc/X11/
+rsync -uvrP --delete-after /etc/pacman.conf                ~/git/dotfiles/etc/
+rsync -uvrP --delete-after /etc/paru.conf                  ~/git/dotfiles/etc/
+rsync -uvrP --delete-after /etc/pam.d/i3lock               ~/git/dotfiles/etc/pam.d/
+rsync -uvrP --delete-after /etc/pam.d/system-local-login   ~/git/dotfiles/etc/pam.d/
 
-rsync -uvrP --delete-after /usr/lib/elogind/system-sleep/lock.sh             ~/git/dotfiles/usr/lib/elogind/system-sleep/
+rsync -uvrP --delete-after /usr/lib/elogind/system-sleep/lock.sh  ~/git/dotfiles/usr/lib/elogind/system-sleep/
 
-#rsync -uvrP --delete-after ~/.config/aacs               ~/git/dotfiles/.config/
-#rsync -uvrP --delete-after ~/.config/mpd/playlists      ~/git/dotfiles/.config/mpd/
+#rsync -uvrP --delete-after ~/.config/aacs                  ~/git/dotfiles/.config/
+#rsync -uvrP --delete-after ~/.config/mpd/playlists         ~/git/dotfiles/.config/mpd/
 
-#rsync -uvrP --delete-after ~/.local/share/password-store ~/git/dotfiles/.local/share
+#rsync -uvrP --delete-after ~/.local/share/password-store   ~/git/dotfiles/.local/share

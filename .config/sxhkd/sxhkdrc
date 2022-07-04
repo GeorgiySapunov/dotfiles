@@ -6,7 +6,7 @@ alt + shift + Return
 alt + shift + q
 				kill -9 `xdotool getwindowfocus getwindowpid`
 super + z
-                betterlockscreen -l
+                fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l
 super + x
                 samedir
 alt + n
