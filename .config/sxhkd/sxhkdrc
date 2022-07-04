@@ -126,7 +126,7 @@ XF86PowerOff
 XF86Calculator
 				$TERMINAL -e bc -l
 XF86Sleep
-				sudo -A zzz
+				loginctl suspend -i
 XF86WWW
 				$BROWSER
 XF86DOS
