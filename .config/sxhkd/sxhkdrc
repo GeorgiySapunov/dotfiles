@@ -24,7 +24,7 @@ alt + shift + r
 alt + e
 				$TERMINAL -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook
 alt + shift + e
-				$TERMINAL -e abook -C ~/.config/abook/abookrc --datafile ~/.config/abook/addressbook
+				$TERMINAL -e abook
 alt + m
 				$TERMINAL -e ncmpcpp
 alt + c
