@@ -23,7 +23,7 @@ xidlehook \
   --timer 60 \
     'xset dpms force off; xrandr --output "$PRIMARY_DISPLAY" --brightness 1' \
     '' \
-  `# Finally, suspend 10 min after it locks` \
-  --timer 600 \
-    '$ctl suspend' \
+  `# lock the screen after 60 more seconds` \
+  --timer 60 \
+    'fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l dim 30' \
     ''
