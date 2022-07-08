@@ -121,8 +121,8 @@ XF86AudioRecord
 XF86AudioMedia
 				$TERMINAL -e ncmpcpp
 
-XF86PowerOff
-				fcitx-remote -c && sysact
+# XF86PowerOff
+				# fcitx-remote -c && sysact
 XF86Calculator
 				$TERMINAL -e bc -l
 XF86Sleep
@@ -164,4 +164,4 @@ alt + {F9,F10}
 alt + F11
 				mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)
 alt + F12
-				remaps & notify-send \"⌨️ Keyboard remapping...\" \"Re-running keyboard defaults for any newly plugged-in keyboards.\"
+				remaps
