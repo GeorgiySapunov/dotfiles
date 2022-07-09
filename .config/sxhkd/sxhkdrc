@@ -1,7 +1,7 @@
 # Basic binds
 alt + Return
 				$TERMINAL
-alt + shift + Return
+# alt + shift + Return
 
 alt + shift + q
 				kill -9 `xdotool getwindowfocus getwindowpid`
