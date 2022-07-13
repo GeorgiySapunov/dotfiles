@@ -168,7 +168,7 @@ static Key keys[] = {
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
-	{ MODKEY,			XK_x,		incrgaps,	{.i = -3 } },
+	{ MODKEY|ShiftMask,	    XK_z,		incrgaps,	{.i = -3 } },
     { MODKEY,			XK_F5,		xrdb,		{.v = NULL } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)

@@ -27,6 +27,8 @@ alt + shift + e
 				$TERMINAL -e abook
 alt + m
 				$TERMINAL -e ncmpcpp
+alt + shift + m
+                emacsclient -c -a 'emacs'
 alt + c
 				$TERMINAL -e calcurse
 alt + v
