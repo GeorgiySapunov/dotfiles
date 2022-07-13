@@ -1,5 +1,6 @@
 #!/bin/sh
 
+rsync -uvrP --delete-after ~/.config/alacritty          ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/dunst              ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/fontconfig         ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/gtk-2.0/gtkrc-2.0  ~/git/dotfiles/.config/gtk-2.0

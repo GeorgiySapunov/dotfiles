@@ -72,6 +72,10 @@ export TLDR_LINESIZE=20
 # pam-gnupg
 export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 
+# Emacs
+export PATH="$HOME/.emacs.d/bin:$PATH"
+alias emacs="emacsclient -c -a 'emacs'"
+
 
 # This is the list for lf icons:
 export LF_ICONS="di=📁:\
