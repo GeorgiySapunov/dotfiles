@@ -1,59 +1,59 @@
 # Basic binds
-alt + Return
+super + Return
 				$TERMINAL
-# alt + shift + Return
+# super + shift + Return
 
-alt + shift + q
+super + shift + q
 				kill -9 `xdotool getwindowfocus getwindowpid`
-super + z
-                fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l
-super + x
-                samedir
-alt + n
+# super + z
+#                 fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l
+# super + x
+#                 samedir
+super + n
 				$TERMINAL -e nvim ~/git/notes/README.md
-alt + shift + n
+super + shift + n
 				$TERMINAL -e newsboat; pkill -RTMIN+6 dwmblocks
-alt + d
+super + d
 				dmenu_run
-alt + shift + d
+super + shift + d
 				fcitx-remote -c && passmenu
-alt + r
+super + r
 				$TERMINAL -e lfub
-alt + shift + r
+super + shift + r
 				$TERMINAL -e htop
-alt + e
+super + e
 				$TERMINAL -e neomutt ; pkill -RTMIN+12 dwmblocks; rmdir ~/.abook
-alt + shift + e
+super + shift + e
 				$TERMINAL -e abook
-alt + m
+super + m
 				$TERMINAL -e ncmpcpp
-alt + shift + m
+super + shift + m
                 emacsclient -c -a 'emacs'
-alt + c
+super + c
 				$TERMINAL -e calcurse
-alt + v
+super + v
                 telegram-desktop
-alt + shift + v
+super + shift + v
                 tor-browser
-alt + shift + a
+super + shift + a
 				$TERMINAL -e alsamixer || pulsemixer; pkill -RTMIN+10 $STATUSBAR
-alt + shift + c
+super + shift + c
 				mpv --no-osc --no-input-default-bindings --input-conf=/dev/null --title='mpvfloat' /dev/video0
-alt + w
+super + w
 				$BROWSER
-alt + shift + w
+super + shift + w
 				$TERMINAL -e sudo nmtui
-alt + ctrl + w
+super + ctrl + w
 				qutebrowser
 
 # Et cetera...
-alt + grave
+super + grave
 				dmenuunicode
-alt + Scroll_Lock
+super + Scroll_Lock
 				killall screenkey || screenkey
-alt + Insert
+super + Insert
 				showclip
-alt + BackSpace
+super + BackSpace
 				fcitx-remote -c && sysact
 XF86Launch1
 				xset dpms force off
@@ -74,37 +74,37 @@ Print
 shift + Print
 				maimpick
 # Print: Record audio or video; Del: kill recording
-alt + Print
+super + Print
 				dmenurecord
-alt + Delete
+super + Delete
 				dmenurecord kill
 
 # Pause audio
-alt + p
+super + p
 				mpc toggle
-alt + shift + p
+super + shift + p
 				mpc pause; pauseallmpv
 # Changes to next/previous tracks
-alt + {comma,period}
+super + {comma,period}
 				mpc {prev,next}
 # Restart track
-alt + shift + less
+super + shift + less
 				mpc seek 0%
-alt + shift + greater
+super + shift + greater
 				mpc repeat
 # Seek foward in song
-alt + {_,shift +} bracketright
+super + {_,shift +} bracketright
 				mpc seek +{10,60}
 # Seek backward in song
-alt + {_,shift +} bracketleft
+super + {_,shift +} bracketleft
 				mpc seek -{10,60}
 # Increase volume
-alt + {equal,plus}
+super + {equal,plus}
 				pamixer --allow-boost -i {5,15}; kill -44 $(pidof dwmblocks)
 # Decrease volume
-alt {_,shift +} + minus
+super {_,shift +} + minus
 				pamixer --allow-boost -d {5,15}; kill -44 $(pidof dwmblocks)
-alt + shift + m
+super + shift + m
 				pamixer -t; kill -44 $(pidof dwmblocks)
 
 # Audiokeys
@@ -143,27 +143,27 @@ XF86MyComputer
 				$TERMINAL -e lf /
 
 # Change display
-alt + F1
+super + F1
 				groff -mom /usr/local/share/dwm/larbs.mom -Tpdf | zathura -
-alt + F2
+super + F2
 				tutorialvids
-alt + F3
+super + F3
 				displayselect
-alt + F4
+super + F4
 				$TERMINAL -e pulsemixer; kill -44 $(pidof dwmblocks)
 # Start torrent daemon/open interface
-alt + F6
+super + F6
 				torwrap
 # toggle torrent daemon
-alt + F7
+super + F7
 				td-toggle
 # sync email
-alt + F8
+super + F8
 				mw -Y
 # Mount a USB drive or Android device
-alt + {F9,F10}
+super + {F9,F10}
 				{dmenumount,dmenuumount}
-alt + F11
+super + F11
 				mpv --no-cache --no-osc --no-input-default-bindings --profile=low-latency --input-conf=/dev/null --title=webcam $(ls /dev/video[0,2,4,6,8] | tail -n 1)
-alt + F12
+super + F12
 				remaps
