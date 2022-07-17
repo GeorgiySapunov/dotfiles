@@ -16,7 +16,7 @@ done >/dev/null 2>&1
 
 sleep 1
 screenlock &
-emacs --daemon &
+# emacs --daemon &
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.
 [ -n "$xrdbpid" ] && wait "$xrdbpid"
