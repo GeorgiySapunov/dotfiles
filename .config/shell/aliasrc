@@ -54,7 +54,5 @@ alias \
 	ref="shortcuts >/dev/null; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/shortcutrc ; source ${XDG_CONFIG_HOME:-$HOME/.config}/shell/zshnameddirrc" \
 	weath="less -S ${XDG_DATA_HOME:-$HOME/.local/share}/weatherreport" \
 
-
-# Emacs
-alias emacsc="emacsclient -c -a 'emacs'"
-alias emacsd="killall emacs; emacs --daemon"
+# git
+alias gpf="git push; git push flic"

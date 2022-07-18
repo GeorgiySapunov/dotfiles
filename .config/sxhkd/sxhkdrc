@@ -5,10 +5,10 @@ super + Return
 
 super + shift + q
 				kill -9 `xdotool getwindowfocus getwindowpid`
-# super + z
-#                 fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l
-# super + x
-#                 samedir
+super + x
+                samedir
+super + shift + x
+                fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l
 super + n
 				$TERMINAL -e nvim ~/git/notes/README.md
 super + shift + n
