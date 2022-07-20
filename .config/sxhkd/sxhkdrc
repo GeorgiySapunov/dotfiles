@@ -6,7 +6,7 @@ super + Return
 super + shift + q
 				kill -9 `xdotool getwindowfocus getwindowpid`
 super + x
-                samedir
+                sd
 super + shift + x
                 fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l
 super + n
@@ -27,8 +27,8 @@ super + shift + e
 				$TERMINAL -e abook
 super + m
 				$TERMINAL -e ncmpcpp
-super + shift + m
-                emacsclient -c -a 'emacs'
+# super + shift + m
+#                 emacsclient -c -a 'emacs'
 super + c
 				$TERMINAL -e calcurse
 super + v
