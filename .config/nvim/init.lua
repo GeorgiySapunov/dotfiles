@@ -26,3 +26,4 @@ require "user.colorizer"
 
 require "user.barbaric"
 require "user.vimwiki"
+require "user.orgmode"
