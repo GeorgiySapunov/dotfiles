@@ -24,7 +24,7 @@ rsync -uvrP --delete-after ~/.config/sxiv               ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/wget               ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/x11                ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/zathura            ~/git/dotfiles/.config
-rsync -uvrP --delete-after ~/.config/zsh/.zshrc         ~/git/dotfiles/.config/zsh/
+rsync -uvrP --delete-after ~/.config/zsh                ~/git/dotfiles/.config/
 rsync -uvrP --delete-after ~/.config/fcitx/config       ~/git/dotfiles/.config/fcitx/
 rsync -uvrP --delete-after ~/.config/mimeapps.list      ~/git/dotfiles/.config/
 rsync -uvrP --delete-after ~/.config/user-dirs.dirs     ~/git/dotfiles/.config/
