@@ -6,6 +6,7 @@ rsync -uvrP --delete-after ~/.config/fontconfig         ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/gtk-2.0/gtkrc-2.0  ~/git/dotfiles/.config/gtk-2.0
 rsync -uvrP --delete-after ~/.config/gtk-3.0            ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/lf                 ~/git/dotfiles/.config
+rsync -uvrP --delete-after ~/.config/lf_kitty           ~/git/dotfiles/.config
 #rsync -uvrP --delete-after ~/.config/mpd/mpd.conf       ~/git/dotfiles/.config/mpd/
 rsync -uvrP --delete-after ~/.config/mpv/script-opts    ~/git/dotfiles/.config/mpv
 rsync -uvrP --delete-after ~/.config/mpv/script-modules ~/git/dotfiles/.config/mpv
