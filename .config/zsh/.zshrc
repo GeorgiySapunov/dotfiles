@@ -51,8 +51,10 @@ zsh_add_plugin "hlissner/zsh-autopair"
 # More completions https://github.com/zsh-users/zsh-completions
 
 # Key-bindings
-bindkey -s '^o' 'lf^M'
-bindkey -s '^f' 'zi^M'
+bindkey -s '^o' '^ulfcd^M'
+bindkey -s '^a' '^ubc -lq^M'
+bindkey -s '^f' '^ucd "$(dirname "$(fzf)")"^M'
+
 bindkey -s '^s' 'ncdu^M'
 # bindkey -s '^n' 'nvim $(fzf)^M'
 # bindkey -s '^v' 'nvim\n'
