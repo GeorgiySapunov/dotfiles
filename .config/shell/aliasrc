@@ -64,4 +64,3 @@ alias gpf="git push; git push flic"
 # zsh and zoxide
 alias j='z'
 alias f='zi'
-alias zsh-update-plugins="find "$ZDOTDIR/plugins" -type d -exec test -e '{}/.git' ';' -print0 | xargs -I {} -0 git -C {} pull -q"
