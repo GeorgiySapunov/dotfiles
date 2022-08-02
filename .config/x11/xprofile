@@ -9,7 +9,7 @@ xrdb ${XDG_CONFIG_HOME:-$HOME/.config}/x11/xresources & xrdbpid=$!	# Uncomment t
 remaps &		# run the remaps script, switching caps/esc and more; check it for more info
 #xcompmgr &		# xcompmgr for transparency
 ibus-daemon -drxR # ibus input method
-autostart="mpd picom dunst unclutter pipewire pipewire-pulse"
+autostart="mpd picom dunst unclutter sxhkd pipewire pipewire-pulse"
 
 for program in $autostart; do
     pidof -s "$program" || "$program" &
@@ -17,7 +17,6 @@ done >/dev/null 2>&1
 
 sleep 1
 screenlock &
-sxhkd -m 1 &
 # emacs --daemon &
 
 # Ensure that xrdb has finished running before moving on to start the WM/DE.

@@ -1,8 +1,8 @@
 /* See LICENSE file for copyright and license details. */
 
 /* Constants */
-#define TERMINAL "st"
-#define TERMCLASS "St"
+#define TERMINAL "kitty"
+#define TERMCLASS "kitty"
 
 /* appearance */
 static unsigned int borderpx  = 1;        /* border pixel of windows */
@@ -32,8 +32,8 @@ typedef struct {
 	const char *name;
 	const void *cmd;
 } Sp;
-const char *spcmd1[] = {TERMINAL, "-n", "spterm", "-g", "120x34", NULL };
-const char *spcmd2[] = {TERMINAL, "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
+const char *spcmd1[] = {"st", "-n", "spterm", "-g", "120x34", NULL };
+const char *spcmd2[] = {"st", "-n", "spcalc", "-f", "monospace:size=16", "-g", "50x20", "-e", "bc", "-lq", NULL };
 static Sp scratchpads[] = {
 	/* name          cmd  */
 	{"spterm",      spcmd1},
@@ -51,10 +51,15 @@ static const Rule rules[] = {
 	/* class       instance      title         	 tags mask    isfloating   isterminal  noswallow  monitor */
 	{ "Gimp",        NULL,       NULL,       	   1 << 8,       0,           0,         0,        -1 },
 	{ TERMCLASS,     NULL,       NULL,       	   0,            0,           1,         0,        -1 },
+	{ "St",       NULL,       NULL,       	   0,            0,           1,         0,        -1 },
+	{ TERMCLASS,     NULL,       NULL,       	   0,            0,           1,         0,        -1 },
 	{ NULL,          NULL,       "Event Tester",   0,            0,           0,         1,        -1 },
 	{ TERMCLASS,     "bg",       NULL,       	   1 << 7,       0,           1,         0,        -1 },
+	{ "St",       "bg",       NULL,       	   1 << 7,       0,           1,         0,        -1 },
 	{ TERMCLASS,     "spterm",   NULL,       	   SPTAG(0),     1,           1,         0,        -1 },
+	{ "St",     "spterm",   NULL,       	   SPTAG(0),     1,           1,         0,        -1 },
 	{ TERMCLASS,     "spcalc",   NULL,       	   SPTAG(1),     1,           1,         0,        -1 },
+	{ "St",     "spcalc",   NULL,       	   SPTAG(1),     1,           1,         0,        -1 },
 	{ "matplotlib",  NULL,       NULL,             0,            0,           0,         1,        -1 },
 	{ "R_x11",       NULL,       NULL,             0,            0,           0,         1,        -1 },
 };

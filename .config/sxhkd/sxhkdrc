@@ -16,7 +16,7 @@ super + d
 super + shift + d
 				ibus engine xkb:us::eng && passmenu
 super + r
-				ibus engine xkb:us::eng && $TERMINAL -e lfub
+				ibus engine xkb:us::eng && $TERMINAL -e lf
 super + shift + r
 				$TERMINAL -e htop
 super + e
@@ -29,9 +29,9 @@ super + m
 #                 emacsclient -c -a 'emacs'
 super + c
 				$TERMINAL -e calcurse
-super + v
+super + g
                 telegram-desktop
-super + shift + v
+super + shift + g
                 tor-browser
 super + shift + a
 				$TERMINAL -e alsamixer || pulsemixer; pkill -RTMIN+10 $STATUSBAR
