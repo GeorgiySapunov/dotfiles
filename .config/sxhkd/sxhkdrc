@@ -3,22 +3,20 @@ super + Return
 				$TERMINAL
 # super + shift + Return
 
-super + shift + q
-				kill -9 `xdotool getwindowfocus getwindowpid`
 super + x
                 sd
 super + shift + x
-                fcit-remote -c; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l
+                ibus engine xkb:us::eng; gpg-connect-agent --no-autostart reloadagent /bye; betterlockscreen -l
 super + n
 				$TERMINAL -e nvim ~/git/notes/README.md
 super + shift + n
 				$TERMINAL -e newsboat; pkill -RTMIN+6 dwmblocks
 super + d
-				dmenu_run
+				ibus engine xkb:us::eng && dmenu_run
 super + shift + d
-				fcitx-remote -c && passmenu
+				ibus engine xkb:us::eng && passmenu
 super + r
-				$TERMINAL -e lfub
+				ibus engine xkb:us::eng && $TERMINAL -e lfub
 super + shift + r
 				$TERMINAL -e htop
 super + e
@@ -54,7 +52,7 @@ super + Scroll_Lock
 super + Insert
 				showclip
 super + BackSpace
-				fcitx-remote -c && sysact
+				ibus engine xkb:us::eng && sysact
 XF86Launch1
 				xset dpms force off
 XF86TouchpadToggle
@@ -124,7 +122,7 @@ XF86AudioMedia
 				$TERMINAL -e ncmpcpp
 
 # XF86PowerOff
-				# fcitx-remote -c && sysact
+				# ibus engine xkb:us::eng && sysact
 XF86Calculator
 				$TERMINAL -e bc -l
 XF86Sleep
@@ -134,7 +132,7 @@ XF86WWW
 XF86DOS
 				$TERMINAL
 XF86ScreenSaver
-				fcitx-remote -c && betterlockscreen -l & xset dpms force off; mpc pause; pauseallmpv
+				ibus engine xkb:us::eng && betterlockscreen -l & xset dpms force off; mpc pause; pauseallmpv
 XF86TaskPane
 				$TERMINAL -e htop
 XF86Mail

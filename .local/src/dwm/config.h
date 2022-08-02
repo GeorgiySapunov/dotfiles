@@ -92,7 +92,9 @@ static const Layout layouts[] = {
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 #define STACKKEYS(MOD,ACTION) \
 	{ MOD,	XK_j,	ACTION##stack,	{.i = INC(+1) } }, \
+	{ MOD,	XK_Cyrillic_o,	ACTION##stack,	{.i = INC(+1) } }, \
 	{ MOD,	XK_k,	ACTION##stack,	{.i = INC(-1) } }, { MOD,  XK_v,   ACTION##stack,  {.i = 0 } }, \
+	{ MOD,	XK_Cyrillic_el,	ACTION##stack,	{.i = INC(-1) } }, { MOD,  XK_v,   ACTION##stack,  {.i = 0 } }, \
 	/* { MOD, XK_grave, ACTION##stack, {.i = PREVSEL } }, \ */
 	/* { MOD, XK_a,     ACTION##stack, {.i = 1 } }, \ */
 	/* { MOD, XK_z,     ACTION##stack, {.i = 2 } }, \ */
@@ -137,25 +139,41 @@ static Key keys[] = {
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	STACKKEYS(MODKEY,                          focus)
 	STACKKEYS(MODKEY|ShiftMask,                push)
+    { MODKEY,	            		XK_q,	   killclient,     {0} },
+    { MODKEY,	            		XK_Cyrillic_shorti,	   killclient,     {0} },
 	{ MODKEY,                       XK_o,      incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_o,      incnmaster,     {.i = -1 } },
+	{ MODKEY,                       XK_Cyrillic_shcha,      incnmaster,     {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Cyrillic_shcha,      incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,      setmfact,       {.f = -0.05} },
+	{ MODKEY,                       XK_Cyrillic_er,      setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,      setmfact,       {.f = +0.05} },
+	{ MODKEY,                       XK_Cyrillic_de,      setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_space,  zoom,           {0} },
 	{ MODKEY,                       XK_Tab,    view,           {0} },
 	{ MODKEY,      		        XK_q,      killclient,     {0} },
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} },
 	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[1]} },
+	{ MODKEY,                       XK_Cyrillic_ie,      setlayout,      {.v = &layouts[0]} },
+	{ MODKEY|ShiftMask,             XK_Cyrillic_ie,      setlayout,      {.v = &layouts[1]} },
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[2]} },
 	{ MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[3]} },
+	{ MODKEY,                       XK_Cyrillic_en,      setlayout,      {.v = &layouts[2]} },
+	{ MODKEY|ShiftMask,             XK_Cyrillic_en,      setlayout,      {.v = &layouts[3]} },
 	{ MODKEY,                       XK_u,      setlayout,      {.v = &layouts[4]} },
 	{ MODKEY|ShiftMask,             XK_u,      setlayout,      {.v = &layouts[5]} },
+	{ MODKEY,                       XK_Cyrillic_ghe,      setlayout,      {.v = &layouts[4]} },
+	{ MODKEY|ShiftMask,             XK_Cyrillic_ghe,      setlayout,      {.v = &layouts[5]} },
 	{ MODKEY,                       XK_i,      setlayout,      {.v = &layouts[6]} },
 	{ MODKEY|ShiftMask,             XK_i,      setlayout,      {.v = &layouts[7]} },
+	{ MODKEY,                       XK_Cyrillic_sha,      setlayout,      {.v = &layouts[6]} },
+	{ MODKEY|ShiftMask,             XK_Cyrillic_sha,      setlayout,      {.v = &layouts[7]} },
 /*	{ MODKEY,                       XK_space,  setlayout,      {0} }, */
 	{ MODKEY|ShiftMask,             XK_space,  togglefloating, {0} },
 	{ MODKEY,                       XK_s,      togglesticky,   {0} },
+	{ MODKEY,                       XK_Cyrillic_yeru,      togglesticky,   {0} },
 	{ MODKEY,             XK_f,      togglefullscr,  {0} },
+	{ MODKEY,             XK_Cyrillic_a,      togglefullscr,  {0} },
 	{ MODKEY,                       XK_Tab,    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
 	{ MODKEY,                       XK_Left,   focusmon,       {.i = -1 } },
@@ -165,10 +183,16 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,           	XK_Return, togglescratch,  {.ui = 0 } },
 	{ MODKEY,           	XK_apostrophe,	   togglescratch,  {.ui = 1 } },
 	{ MODKEY|ShiftMask,     XK_apostrophe,     togglesmartgaps,     {0} },
+	{ MODKEY,           	XK_Cyrillic_e,	   togglescratch,  {.ui = 1 } },
+	{ MODKEY|ShiftMask,     XK_Cyrillic_e,     togglesmartgaps,     {0} },
 	{ MODKEY,			XK_a,		togglegaps,	{0} },
 	{ MODKEY|ShiftMask,		XK_a,		defaultgaps,	{0} },
+	{ MODKEY,			XK_Cyrillic_ef,		togglegaps,	{0} },
+	{ MODKEY|ShiftMask,		XK_Cyrillic_ef,		defaultgaps,	{0} },
 	{ MODKEY,			XK_z,		incrgaps,	{.i = +3 } },
 	{ MODKEY|ShiftMask,	    XK_z,		incrgaps,	{.i = -3 } },
+	{ MODKEY,			XK_Cyrillic_ya,		incrgaps,	{.i = +3 } },
+	{ MODKEY|ShiftMask,	    XK_Cyrillic_ya,		incrgaps,	{.i = -3 } },
     { MODKEY,			XK_F5,		xrdb,		{.v = NULL } },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
