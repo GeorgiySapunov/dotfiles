@@ -1,7 +1,5 @@
 ## home
 
-.gnupg
-
 .ssh
 
 ## .config
@@ -15,6 +13,8 @@
 ~/.config/.local/share/
 
 ~/.config/.local/share/password-store
+
+~/.config/.local/share/gnupg
 
 ## etc
 
