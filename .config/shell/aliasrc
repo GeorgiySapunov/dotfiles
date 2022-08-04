@@ -29,7 +29,7 @@ alias \
 
 # Colorize commands when possible.
 alias \
-	ls="exa -h --color=auto --group-directories-first" \
+	ls="exa -h --icons --color=auto --group-directories-first" \
 	grep="grep --color=auto" \
 	egrep="egrep --color=auto" \
 	fgrep="fgrep --color=auto" \
