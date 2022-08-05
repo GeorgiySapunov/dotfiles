@@ -133,13 +133,19 @@ static const char *termcmd[]  = { TERMINAL, NULL };
 // nord
 ResourcePref resources[] = {
         // nord
+		// { "color0",		STRING,	&normbordercolor },
+		// { "color6",		STRING,	&selbordercolor },
+		// { "color0",		STRING,	&normbgcolor },
+		// { "color7",		STRING,	&normfgcolor },
+		// { "color0",		STRING,	&selfgcolor },
+		// { "color4",		STRING,	&selbgcolor },
+        // catppuccin
 		{ "color0",		STRING,	&normbordercolor },
 		{ "color6",		STRING,	&selbordercolor },
 		{ "color0",		STRING,	&normbgcolor },
 		{ "color7",		STRING,	&normfgcolor },
 		{ "color0",		STRING,	&selfgcolor },
-		{ "color4",		STRING,	&selbgcolor },
-
+		{ "color6",		STRING,	&selbgcolor },
         // gruvbox
         // { "color0",		STRING,	&normbordercolor },
 		// { "color8",		STRING,	&selbordercolor },
