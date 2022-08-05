@@ -16,12 +16,28 @@ static int smartgaps          = 0;        /* 1 means no outer gap when there is 
 static int showbar            = 1;        /* 0 means no bar */
 static int topbar             = 1;        /* 0 means bottom bar */
 static char *fonts[]          = { "mono:size=13", "JoyPixels:pixelsize=13:antialias=true:autohint=true"  };
-static char normbgcolor[]           = "#3B4252";
-static char normbordercolor[]       = "#3B4252";
-static char normfgcolor[]           = "#E5E9F0";
-static char selfgcolor[]            = "#3B4252";
-static char selbordercolor[]        = "#88C0D0";
-static char selbgcolor[]            = "#81A1C1";
+// nord
+// static char normbgcolor[]           = "#3B4252";
+// static char normbordercolor[]       = "#3B4252";
+// static char normfgcolor[]           = "#E5E9F0";
+// static char selfgcolor[]            = "#3B4252";
+// static char selbordercolor[]        = "#88C0D0";
+// static char selbgcolor[]            = "#81A1C1";
+// gruvbox
+// static char normbgcolor[]           = "#222222";
+// static char normbordercolor[]       = "#444444";
+// static char normfgcolor[]           = "#bbbbbb";
+// static char selfgcolor[]            = "#eeeeee";
+// static char selbordercolor[]        = "#770000";
+// static char selbgcolor[]            = "#005577";
+// catppuccin
+static char normbgcolor[]           = "#24273A";
+static char normbordercolor[]       = "#494D64";
+static char normfgcolor[]           = "#B8C0E0";
+static char selfgcolor[]            = "#CAD3F5";
+static char selbordercolor[]        = "#8BD5CA";
+static char selbgcolor[]            = "#8AADF4";
+
 static char *colors[][3] = {
        /*               fg           bg           border   */
        [SchemeNorm] = { normfgcolor, normbgcolor, normbordercolor },
@@ -114,13 +130,24 @@ static const char *termcmd[]  = { TERMINAL, NULL };
 /*
  * Xresources preferences to load at startup
  */
+// nord
 ResourcePref resources[] = {
+        // nord
 		{ "color0",		STRING,	&normbordercolor },
 		{ "color6",		STRING,	&selbordercolor },
 		{ "color0",		STRING,	&normbgcolor },
 		{ "color7",		STRING,	&normfgcolor },
 		{ "color0",		STRING,	&selfgcolor },
 		{ "color4",		STRING,	&selbgcolor },
+
+        // gruvbox
+        // { "color0",		STRING,	&normbordercolor },
+		// { "color8",		STRING,	&selbordercolor },
+		// { "color0",		STRING,	&normbgcolor },
+		// { "color4",		STRING,	&normfgcolor },
+		// { "color0",		STRING,	&selfgcolor },
+		// { "color4",		STRING,	&selbgcolor },
+
 		{ "borderpx",		INTEGER, &borderpx },
 		{ "snap",		INTEGER, &snap },
 		{ "showbar",		INTEGER, &showbar },
