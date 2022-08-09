@@ -10,7 +10,7 @@ rsync -uvrP --delete-after ~/.config/lf                 ~/git/dotfiles/.config
 rsync -uvrP --delete-after ~/.config/lf_st              ~/git/dotfiles/.config
 #rsync -uvrP --delete-after ~/.config/mpd/mpd.conf       ~/git/dotfiles/.config/mpd/
 rsync -uvrP --delete-after ~/.config/mpv/script-opts    ~/git/dotfiles/.config/mpv
-rsync -uvrP --delete-after ~/.config/mpv/script-modules ~/git/dotfiles/.config/mpv
+rsync -uvrP --delete-after ~/.config/mpv/script_modules ~/git/dotfiles/.config/mpv
 rsync -uvrP --delete-after ~/.config/mpv/scripts        ~/git/dotfiles/.config/mpv
 rsync -uvrP --delete-after ~/.config/mpv/input.conf     ~/git/dotfiles/.config/mpv
 rsync -uvrP --delete-after ~/.config/mpv/mpv.conf       ~/git/dotfiles/.config/mpv
