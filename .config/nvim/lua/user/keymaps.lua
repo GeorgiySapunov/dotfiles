@@ -1,7 +1,8 @@
 -- Shorten function name
 local keymap = vim.keymap.set
--- Silent keymap option
+-- keymap option
 local opts = { silent = true }
+local opt = { expr = true, remap = true, replace_keycodes = false }
 
 --Remap space as leader key
 keymap("", "<Space>", "<Nop>", opts)
@@ -76,8 +77,17 @@ keymap("x", "K", ":move '<-2<CR>gv-gv", opts)
 -- keymap("n", "<leader>gg", "<cmd>lua _LAZYGIT_TOGGLE()<CR>", opts)
 
 -- Comment
-keymap("n", "<leader>/", "<cmd>lua require('Comment.api').toggle_current_linewise()<CR>", opts)
-keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle_linewise_op(vim.fn.visualmode())<CR>')
+-- Toggle using count
+vim.keymap.set('n', "<leader>/", "v:count == 0 ? '<Plug>(comment_toggle_linewise_current)' : '<Plug>(comment_toggle_linewise_count)'", opt)
+vim.keymap.set('n', 'gbc', "v:count == 0 ? '<Plug>(comment_toggle_blockwise_current)' : '<Plug>(comment_toggle_blockwise_count)'", opt)
+
+-- Toggle in Op-pending mode
+vim.keymap.set('n', 'gc', '<Plug>(comment_toggle_linewise)')
+vim.keymap.set('n', 'gb', '<Plug>(comment_toggle_blockwise)')
+
+-- Toggle in VISUAL mode
+vim.keymap.set('x', "<leader>/", '<Plug>(comment_toggle_linewise_visual)')
+vim.keymap.set('x', 'gb', '<Plug>(comment_toggle_blockwise_visual)')
 
 -- DAP
 -- keymap("n", "<leader>db", "<cmd>lua require'dap'.toggle_breakpoint()<cr>", opts)
