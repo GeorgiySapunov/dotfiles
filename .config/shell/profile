@@ -81,9 +81,6 @@ export SSH_AUTH_SOCK=$(gpgconf --list-dirs agent-ssh-socket)
 export MANPAGER='nvim +Man!'
 export MANWIDTH=999
 
-# This is the list for lf icons:
-[ -f "${XDG_CONFIG_HOME:-$HOME/.config}/shell/favicons" ] && source "${XDG_CONFIG_HOME:-$HOME/.config}/shell/favicons"
-
 # Start graphical server on user's current tty if not already running.
 [ "$(tty)" = "/dev/tty1" ] && ! pidof -s Xorg >/dev/null 2>&1 && exec startx "$XINITRC"
 
