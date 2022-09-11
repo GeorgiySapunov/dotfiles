@@ -42,3 +42,4 @@ vim.opt.iskeyword:append("-")
 
 vim.opt.relativenumber = true                   -- set relative numbered lines
 vim.opt.spelllang = { "ru_yo", "en_us", "fr", "cjk" }
+vim.opt.foldmethod = "marker"
