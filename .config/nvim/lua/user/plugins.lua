@@ -58,9 +58,13 @@ return packer.startup(function(use)
   use "goolord/alpha-nvim"
   use "folke/which-key.nvim"
   use "norcalli/nvim-colorizer.lua"
-  use {'nvim-orgmode/orgmode', config = function()
-  end
-  }
+  use({'jakewvincent/mkdnflow.nvim',
+    rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
+    config = function()
+        require('mkdnflow').setup({})
+    end
+})
+
   -- Colorschemes
   -- use "rafi/awesome-vim-colorschemes"
 use { "catppuccin/nvim", as = "catppuccin" }
@@ -107,7 +111,6 @@ use { "catppuccin/nvim", as = "catppuccin" }
   		vim.fn["mkdp#util#install"]()
   	end,
   })
-  use("vimwiki/vimwiki")
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
