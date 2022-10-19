@@ -100,7 +100,7 @@ return packer.startup(function(use)
   use { "rcarriga/nvim-dap-ui" }
   use { "ravenxrz/DAPInstall.nvim" }
 
-  -- Vim Script
+  -- Personal (Vim Script)
   use("mbbill/undotree")
   use("dhruvasagar/vim-table-mode")
   use("rlue/vim-barbaric")
@@ -111,7 +111,7 @@ return packer.startup(function(use)
   	end,
   })
 
-  -- personal
+  -- Personal (lua)
   use "folke/which-key.nvim"
   use "norcalli/nvim-colorizer.lua"
   use({'jakewvincent/mkdnflow.nvim',
