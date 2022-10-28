@@ -25,3 +25,4 @@ require "user.whichkey"
 require "user.colorizer"
 
 require "user.barbaric"
+require "user.markdown-preview"
