@@ -16,12 +16,12 @@ rsync -uvrP --delete-after ~/git/dotfiles/.config/nvim/init.lua      ~/.config/n
 rsync -uvrP --delete-after ~/git/dotfiles/.config/nvim/ftplugin      ~/.config/nvim
 rsync -uvrP --delete-after ~/git/dotfiles/.config/nvim/lua           ~/.config/nvim
 rsync -uvrP --delete-after ~/git/dotfiles/.config/pipewire           ~/.config
-rsync -uvrP --delete-after ~/git/dotfiles/.config/shell              ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/sxhkd              ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/sxiv               ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/wget               ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/x11                ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/zathura            ~/.config
+# rsync -uvrP --delete-after ~/git/dotfiles/.config/shell              ~/.config
 rsync -uvrP --delete-after ~/git/dotfiles/.config/zsh                ~/.config/
 rsync -uvrP --delete-after ~/git/dotfiles/.config/mimeapps.list      ~/.config/
 rsync -uvrP --delete-after ~/git/dotfiles/.config/user-dirs.dirs     ~/.config/
@@ -35,7 +35,7 @@ rsync -uvrP --delete-after ~/git/dotfiles/.local/share/larbs         ~/.local/sh
 rsync -uvrP --delete-after ~/git/dotfiles/.local/share/wallpaper.jpg ~/.local/share
 rsync -uvrP --delete-after ~/git/dotfiles/.local/share/themes        ~/.local/share
 
-cp ~/git/dotfiles/.config/shell/profile ~/.zprofile
+# cp ~/git/dotfiles/.config/shell/profile ~/.zprofile
 cp ~/git/dotfiles/.config/x11/xprofile  ~/.xprofile
 cp ~/git/dotfiles/.local/share/bg  ~/.local/share
 

@@ -98,18 +98,23 @@ super + {_,shift +} bracketleft
 				mpc seek -{10,60}
 # Increase volume
 super + {equal,plus}
-				pamixer --allow-boost -i {5,15}; kill -44 $(pidof dwmblocks)
+                wpctl set-volume @DEFAULT_AUDIO_SINK@ {5,15}%+; kill -44 $(pidof dwmblocks)
+				# pamixer --allow-boost -i {5,15}; kill -44 $(pidof dwmblocks)
 # Decrease volume
 super {_,shift +} + minus
-				pamixer --allow-boost -d {5,15}; kill -44 $(pidof dwmblocks)
+                wpctl set-volume @DEFAULT_AUDIO_SINK@ {5,15}%-; kill -44 $(pidof dwmblocks)
+				# pamixer --allow-boost -d {5,15}; kill -44 $(pidof dwmblocks)
 super + shift + m
-				pamixer -t; kill -44 $(pidof dwmblocks)
+                wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; kill -44 $(pidof dwmblocks)
+				# pamixer -t; kill -44 $(pidof dwmblocks)
 
 # Audiokeys
 XF86AudioMute
-				pamixer -t; kill -44 $(pidof dwmblocks)
+                wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle; kill -44 $(pidof dwmblocks)
+				# pamixer -t; kill -44 $(pidof dwmblocks)
 XF86Audio{Raise,Lower}Volume
-				pamixer --allow-boost -{i,d} 3; kill -44 $(pidof dwmblocks)
+                wpctl set-volume @DEFAULT_AUDIO_SINK@ 3%{+,-}; kill -44 $(pidof dwmblocks)
+				# pamixer --allow-boost -{i,d} 3; kill -44 $(pidof dwmblocks)
 XF86Audio{Next,Prev}
 				mpc {next,prev}
 XF86Audio{Pause,Play,Stop}
