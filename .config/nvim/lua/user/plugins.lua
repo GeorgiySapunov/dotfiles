@@ -113,6 +113,7 @@ return packer.startup(function(use)
 
   -- Personal (lua)
   use "folke/which-key.nvim"
+  use "theprimeagen/harpoon"
   use "norcalli/nvim-colorizer.lua"
   use({'jakewvincent/mkdnflow.nvim',
     rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed

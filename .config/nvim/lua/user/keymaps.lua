@@ -42,6 +42,14 @@ keymap("n", "<S-q>", "<cmd>Bdelete!<CR>", opts)
 -- Better paste
 keymap("v", "p", '"_dP', opts)
 
+-- next greatest remap ever : asbjornHaland
+keymap({"n", "v"}, "<leader>y", [["+y]])
+keymap("n", "<leader>Y", [["+Y]])
+
+keymap({"n", "v"}, "<leader>d", [["_d]])
+
+keymap("n", "Q", "<nop>")
+
 -- Insert --
 -- Press jk fast to enter
 -- keymap("i", "jk", "<ESC>", opts)
@@ -90,3 +98,6 @@ keymap("x", "<leader>/", '<ESC><CMD>lua require("Comment.api").toggle.linewise(v
 -- keymap("n", "<leader>dl", "<cmd>lua require'dap'.run_last()<cr>", opts)
 -- keymap("n", "<leader>du", "<cmd>lua require'dapui'.toggle()<cr>", opts)
 -- keymap("n", "<leader>dt", "<cmd>lua require'dap'.terminate()<cr>", opts)
+
+-- Lsp
+-- keymap("n", "<leader>lf", "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", opts)

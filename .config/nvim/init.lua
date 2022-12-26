@@ -1,4 +1,4 @@
--- require "user.impatient"
+require "user.impatient"
 require "user.options"
 require "user.keymaps"
 require "user.plugins"
@@ -23,6 +23,7 @@ require "user.dap"
 
 require "user.whichkey"
 require "user.colorizer"
+require "user.harpoon"
 
 require "user.barbaric"
 require "user.markdown-preview"

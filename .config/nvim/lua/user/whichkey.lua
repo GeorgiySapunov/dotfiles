@@ -81,7 +81,7 @@ local opts = {
 local mappings = {
   ["u"] = { "<cmd>UndotreeToggle<CR>", "UndoTree" },
   ["m"] = { "<cmd>MarkdownPreviewToggle<CR>", "Markdown" },
-  ["a"] = { "<cmd>Alpha<cr>", "Alpha" },
+  ["A"] = { "<cmd>Alpha<cr>", "Alpha" },
   ["b"] = {
     "<cmd>lua require('telescope.builtin').buffers(require('telescope.themes').get_dropdown{previewer = false})<cr>",
     "Buffers",
@@ -98,7 +98,7 @@ local mappings = {
   ["F"] = { "<cmd>Telescope live_grep theme=ivy<cr>", "Find Text" },
   ["P"] = { "<cmd>lua require('telescope').extensions.projects.projects()<cr>", "Projects" },
 
-  p = {
+  r = {
     name = "Packer",
     c = { "<cmd>PackerCompile<cr>", "Compile" },
     i = { "<cmd>PackerInstall<cr>", "Install" },
@@ -141,7 +141,7 @@ local mappings = {
       "<cmd>Telescope lsp_workspace_diagnostics<cr>",
       "Workspace Diagnostics",
     },
-    f = { "<cmd>lua vim.lsp.buf.formatting()<cr>", "Format" },
+    f = { "<cmd>lua vim.lsp.buf.format{ async = true }<cr>", "Format" },
     i = { "<cmd>LspInfo<cr>", "Info" },
     m = { "<cmd>Mason<cr>", "Mason" },
     j = {
@@ -182,7 +182,7 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
-  d = {
+  D = {
     name = "DAP",
     b = { "<cmd>lua require'dap'.toggle_breakpoint()<cr>", "Toggle breakpoint" },
     c = { "<cmd>lua require'dap'.continue()<cr>", "Continue" },

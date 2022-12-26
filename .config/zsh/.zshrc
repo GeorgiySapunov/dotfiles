@@ -10,7 +10,8 @@ export XDG_CACHE_HOME="$HOME/.cache"
 
 
 # history
-HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
+# HISTFILE="${XDG_CACHE_HOME:-$HOME/.cache}/zsh/history"
+HISTFILE="$XDG_DATA_HOME/history"
 
 # source
 plug "$XDG_CONFIG_HOME/zsh/aliases.zsh"
