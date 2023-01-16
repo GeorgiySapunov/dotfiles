@@ -18,7 +18,7 @@ cmd open ${{
 	image/vnd.djvu|application/pdf|application/octet-stream|application/postscript)
         setsid -f zathura $fx >/dev/null 2>&1
         ;;
-    text/*|application/json|inode/x-empty)
+    text/*|application/json|inode/x-empty|application/x-subrip)
         $EDITOR $fx
         ;;
 	image/x-xcf)
@@ -35,7 +35,7 @@ cmd open ${{
 			lf -remote "send toggle"
 		done &
 		;;
-	audio/*)
+	audio/*|video/x-ms-asf)
         mpv --audio-display=no $f
         ;;
 	video/*|application/vnd.rn-realmedia)
