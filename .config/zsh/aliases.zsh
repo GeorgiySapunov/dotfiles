@@ -68,6 +68,7 @@ alias m="git checkout master"
 alias s="git checkout stable"
 
 alias gpf="git push; git push flic"
+alias gpfforce="git push --force; git push flic --force"
 
 if [[ $TERM == "xterm-kitty" ]]; then
   alias ssh="kitty +kitten ssh"
