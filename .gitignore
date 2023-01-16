@@ -3,3 +3,5 @@
 /etc/X11/xorg.conf.d/20-nouveau.conf*/
 /.local/share/wallpaper.jpg
 /.local/share/bg
+/.config/zsh/.zcompdump
+/.config/zsh/.zsh_history

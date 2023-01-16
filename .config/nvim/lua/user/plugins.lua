@@ -80,7 +80,7 @@ return packer.startup(function(use)
   -- LSP
   -- use { "williamboman/nvim-lsp-installer" } -- simple to use language server installer
   use { "neovim/nvim-lspconfig" } -- enable LSP
-  use { "williamboman/mason.nvim"}
+  use { "williamboman/mason.nvim" }
   use { "williamboman/mason-lspconfig.nvim" }
   use { "jose-elias-alvarez/null-ls.nvim" } -- for formatters and linters
   use { "RRethy/vim-illuminate" }
@@ -101,26 +101,26 @@ return packer.startup(function(use)
   use { "ravenxrz/DAPInstall.nvim" }
 
   -- Personal (Vim Script)
-  use("mbbill/undotree")
-  use("dhruvasagar/vim-table-mode")
-  use("rlue/vim-barbaric")
-  use({
+  use { "mbbill/undotree" }
+  use {"dhruvasagar/vim-table-mode" }
+  use {"rlue/vim-barbaric" }
+  use {
   	"iamcco/markdown-preview.nvim",
   	run = function()
   		vim.fn["mkdp#util#install"]()
   	end,
-  })
+  }
 
   -- Personal (lua)
-  use "folke/which-key.nvim"
-  use "theprimeagen/harpoon"
-  use "norcalli/nvim-colorizer.lua"
-  use({'jakewvincent/mkdnflow.nvim',
+  use { "folke/which-key.nvim" }
+  use { "theprimeagen/harpoon" }
+  use { "norcalli/nvim-colorizer.lua" }
+  use {'jakewvincent/mkdnflow.nvim',
     rocks = 'luautf8', -- Ensures optional luautf8 dependency is installed
     config = function()
         require('mkdnflow').setup({})
     end
-  })
+  }
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
